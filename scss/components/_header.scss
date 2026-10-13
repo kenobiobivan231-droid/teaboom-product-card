@@ -1,0 +1,238 @@
+// =============================================================================
+// Header Component
+// Authentic Teaboom.ru top navigation & header bar
+// =============================================================================
+
+@use "../utilities/mixins" as *;
+
+.site-header {
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+  z-index: 50;
+
+  &__top {
+    background-color: var(--color-primary-surface);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    padding: 8px 0;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+
+  &__city {
+    display: none;
+    @include respond-to("md") {
+      display: block;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__phone {
+    font-weight: 700;
+    color: var(--color-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      color: var(--color-danger);
+    }
+  }
+
+  &__schedule {
+    display: none;
+    @include respond-to("md") {
+      display: inline-block;
+    }
+  }
+
+  &__main {
+    padding: 14px 0;
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  &__logo-img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+
+    @include respond-to("md") {
+      height: 48px;
+    }
+  }
+
+  &__brand-text {
+    display: none;
+    @include respond-to("sm") {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__brand-name {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  &__brand-subtitle {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
+  }
+
+  &__search {
+    display: none;
+    position: relative;
+    max-width: 440px;
+    flex: 1;
+
+    @include respond-to("lg") {
+      display: block;
+    }
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 10px 44px 10px 16px;
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    font-size: 0.875rem;
+    color: var(--color-text-main);
+    transition: all var(--transition-fast);
+
+    &:focus {
+      background-color: #ffffff;
+      border-color: var(--color-primary-hover);
+      box-shadow: 0 0 0 3px rgba(245, 215, 48, 0.25);
+    }
+
+    &::placeholder {
+      color: var(--color-text-subtle);
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include respond-to("md") {
+      gap: 16px;
+    }
+  }
+
+  &__action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    background-color: var(--color-bg-surface);
+    position: relative;
+    transition: all var(--transition-fast);
+
+    &:hover {
+      background-color: var(--color-bg-surface-hover);
+      transform: translateY(-1px);
+    }
+
+    &--cart {
+      background-color: var(--color-primary);
+
+      &:hover {
+        background-color: var(--color-primary-hover);
+      }
+
+      .site-header__cart-text {
+        display: none;
+        @include respond-to("sm") {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &__action-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+
+  &__action-badge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: var(--color-danger);
+    color: #ffffff;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    &.bump {
+      transform: scale(1.3);
+    }
+  }
+}

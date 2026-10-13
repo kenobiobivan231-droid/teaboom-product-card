@@ -1,0 +1,49 @@
+// =============================================================================
+// Typography Styles
+// Clean typographic hierarchy with fluid scaling
+// =============================================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+  color: var(--color-dark);
+  font-weight: 700;
+  line-height: var(--line-height-tight);
+}
+
+// Product main title: fluid scaling from 24px (mobile) to 34px (desktop)
+.product-title {
+  font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2.125rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+// Section headings (e.g. "О товаре", "Характеристики")
+.section-subtitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-dark);
+}
+
+// Currency formatting helper
+.currency-symbol {
+  font-family: inherit;
+  font-weight: inherit;
+  padding-left: 2px;
+}
+
+// Small meta labels
+.text-muted {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.text-small {
+  font-size: 0.8125rem;
+}

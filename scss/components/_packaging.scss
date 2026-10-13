@@ -1,0 +1,147 @@
+// =============================================================================
+// Packaging Selector Component
+// Accessible radio pills for weight options (100g, 500g, 1000g, 5000g)
+// =============================================================================
+
+@use "../utilities/mixins" as *;
+
+.packaging {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9375rem;
+  }
+
+  &__legend {
+    font-weight: 700;
+    color: var(--color-dark);
+  }
+
+  &__current-value {
+    color: var(--color-accent-tea);
+    font-weight: 700;
+  }
+
+  &__guide-link {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-dark);
+    }
+  }
+
+  // Grid of packaging options
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @include respond-to("lg") {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+  }
+
+  // Pill wrapper
+  &__item {
+    position: relative;
+  }
+
+  // Label acting as clickable pill
+  &__pill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px 14px;
+    background-color: var(--color-bg-card);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    &:hover {
+      border-color: var(--color-primary-hover);
+      background-color: var(--color-primary-surface);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+  }
+
+  // Weight label (100 г, 500 г, etc.)
+  &__weight {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  // Price hint inside pill
+  &__price-hint {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  // Mini discount badge on pill
+  &__discount-tag {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--color-danger);
+    background-color: var(--color-danger-bg);
+    padding: 2px 6px;
+    border-radius: var(--radius-pill);
+    line-height: 1.2;
+  }
+
+  // Active / Checked State via :checked sibling selector
+  &__input:checked + &__pill {
+    border-color: var(--color-dark);
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), 0 0 0 2px var(--color-primary);
+
+    .packaging__weight {
+      color: var(--color-dark);
+    }
+
+    .packaging__price-hint {
+      color: var(--color-dark);
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: var(--color-primary);
+    }
+  }
+
+  // Keyboard navigation focus
+  &__input:focus-visible + &__pill {
+    outline: 2px solid var(--color-dark);
+    outline-offset: 3px;
+  }
+}

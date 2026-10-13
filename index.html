@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ананасовый улун — купить светлый китайский улун с натуральным ананасом в интернет-магазине Чайный Бум (Teaboom.ru). Быстрая доставка по Москве и России.">
+  <title>Ананасовый улун — купить в интернет-магазине «Чайный Бум» | Teaboom.ru</title>
+
+  <!-- Google Fonts: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Production Compiled Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+</head>
+<body>
+
+  <!-- ======================================================================= -->
+  <!-- 1. HEADER (Authentic Teaboom.ru navigation & brand bar)                 -->
+  <!-- ======================================================================= -->
+  <header class="site-header">
+    <!-- Top Info Strip -->
+    <div class="site-header__top">
+      <div class="container">
+        <div class="site-header__contacts">
+          <a href="tel:+74951201551" class="site-header__phone">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            +7 (495) 120-15-51
+          </a>
+          <span class="site-header__schedule">пн - пт с 10:00 до 19:00, сб - вс с 12:00 до 16:00</span>
+        </div>
+        <div class="site-header__city">
+          <span>Доставка по Москве и всей России</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Header -->
+    <div class="site-header__main">
+      <div class="container">
+        <!-- Logo & Brand -->
+        <a href="https://teaboom.ru" class="site-header__brand" aria-label="Интернет-магазин Teaboom.ru">
+          <img src="assets/images/logo.png" alt="Чайный Бум" class="site-header__logo-img" width="160" height="48">
+          <div class="site-header__brand-text">
+            <span class="site-header__brand-name">Чайный Бум</span>
+            <span class="site-header__brand-subtitle">Интернет-магазин чая и посуды</span>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <form class="site-header__search" action="#" method="get" role="search">
+          <input type="search" class="site-header__search-input" placeholder="Поиск среди более 1000 сортов чая..." aria-label="Поиск по сайту">
+          <button type="submit" class="site-header__search-btn" aria-label="Найти">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Header Actions: Favorites & Cart -->
+        <div class="site-header__actions">
+          <button type="button" class="site-header__action-btn" id="header-wishlist-btn" aria-label="Избранное">
+            <span class="site-header__action-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span class="site-header__action-badge" id="header-wishlist-badge">0</span>
+            </span>
+            <span class="visually-hidden">Товаров в избранном</span>
+          </button>
+
+          <a href="#cart" class="site-header__action-btn site-header__action-btn--cart" aria-label="Корзина покупок">
+            <span class="site-header__action-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+              <span class="site-header__action-badge" id="header-cart-badge">0</span>
+            </span>
+            <span class="site-header__cart-text">Корзина</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================= -->
+  <!-- 2. MAIN CONTAINER & BREADCRUMBS                                         -->
+  <!-- ======================================================================= -->
+  <main class="container" id="main-content">
+    
+    <!-- Breadcrumbs Navigation with Microdata -->
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://teaboom.ru" class="breadcrumbs__link" itemprop="item"><span itemprop="name">Главная</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://teaboom.ru/category-root" class="breadcrumbs__link" itemprop="item"><span itemprop="name">Каталог</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://teaboom.ru/category-ulun" class="breadcrumbs__link" itemprop="item"><span itemprop="name">Улун</span></a>
+          <meta itemprop="position" content="3">
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="https://teaboom.ru/category-kitajskij-aromatizirovannyj-ulun" class="breadcrumbs__link" itemprop="item"><span itemprop="name">Китайский ароматизированный улун</span></a>
+          <meta itemprop="position" content="4">
+        </li>
+        <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span class="breadcrumbs__current" aria-current="page" itemprop="name">Ананасовый улун</span>
+          <meta itemprop="position" content="5">
+        </li>
+      </ol>
+    </nav>
+
+    <!-- ===================================================================== -->
+    <!-- 3. PRODUCT CARD (Top Section)                                         -->
+    <!-- Semantic HTML5 Article with Schema.org Product Microdata              -->
+    <!-- ===================================================================== -->
+    <article class="product-card" itemscope itemtype="https://schema.org/Product" aria-labelledby="product-heading">
+      <div class="product-card__layout">
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- LEFT COLUMN: Product Media & Interactive Gallery                 -->
+        <!-- ----------------------------------------------------------------- -->
+        <div class="product-card__media">
+          <div class="gallery" role="region" aria-label="Фотографии товара">
+            <!-- Main Photo Container -->
+            <div class="gallery__main" id="gallery-main" title="Нажмите для увеличения">
+              <!-- Badges -->
+              <div class="gallery__badges">
+                <span class="badge badge--discount" id="gallery-discount-badge">-7%</span>
+                <span class="badge badge--stock">В наличии</span>
+              </div>
+
+              <!-- Quick action floating buttons -->
+              <div class="gallery__floating-actions">
+                <button type="button" class="gallery__action-btn" id="gallery-zoom-btn" aria-label="Увеличить фото на весь экран">
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/>
+                    <line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Primary Image -->
+              <div class="gallery__image-wrapper">
+                <img 
+                  src="assets/images/ananasovij-ulun.jpg" 
+                  alt="Ананасовый улун — элитный китайский чай с кусочками ананаса" 
+                  class="gallery__image" 
+                  id="gallery-main-img"
+                  itemprop="image"
+                  width="600" 
+                  height="600"
+                  fetchpriority="high"
+                  loading="eager"
+                  decoding="async"
+                >
+              </div>
+            </div>
+
+            <!-- Gallery Thumbnails -->
+            <div class="gallery__thumbs" role="group" aria-label="Миниатюры товара">
+              <button type="button" class="gallery__thumb-btn is-active" data-full-src="assets/images/ananasovij-ulun.jpg" aria-label="Фото 1: Сухой лист со цукатами">
+                <img src="assets/images/ananasovij-ulun.jpg" alt="Миниатюра 1" width="84" height="84" loading="lazy">
+              </button>
+              <button type="button" class="gallery__thumb-btn" data-full-src="assets/images/ananasovij-ulun-taiwan.jpg" aria-label="Фото 2: Крупный план скрученного листа">
+                <img src="assets/images/ananasovij-ulun-taiwan.jpg" alt="Миниатюра 2" width="84" height="84" loading="lazy">
+              </button>
+              <button type="button" class="gallery__thumb-btn" data-full-src="assets/images/persikovyj-ulun.jpg" aria-label="Фото 3: Текстура чайного листа">
+                <img src="assets/images/persikovyj-ulun.jpg" alt="Миниатюра 3" width="84" height="84" loading="lazy">
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ----------------------------------------------------------------- -->
+        <!-- RIGHT COLUMN: Details, Pricing, Packaging & Actions               -->
+        <!-- ----------------------------------------------------------------- -->
+        <div class="product-card__details">
+
+          <!-- 1. Meta row: Category, SKU, Rating -->
+          <div class="product-card__meta">
+            <div class="product-card__meta-left">
+              <span class="product-card__category" itemprop="category">Ароматизированный улун</span>
+              <span class="product-card__sku-label">
+                Артикул: <strong id="product-sku-value" itemprop="sku">01306</strong>
+              </span>
+            </div>
+
+            <div class="product-card__rating">
+              <div class="stars" aria-label="Рейтинг 5 из 5">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="rating-value">5.0</span>
+              <a href="#reviews" class="rating-link">(14 отзывов)</a>
+            </div>
+          </div>
+
+          <!-- 2. Product Title -->
+          <h1 class="product-title product-card__title" id="product-heading" itemprop="name">Ананасовый улун</h1>
+
+          <!-- 3. Short Description Block -->
+          <div class="product-card__description" itemprop="description">
+            <p>
+              Светлый Фуцзяньский улун с добавлением натуральных цукатов спелого ананаса и ароматических масел. 
+              В прогретой посуде раскрывается ароматом свежей весенней зелени и сладких тропических фруктов с мягким медовым послевкусием.
+            </p>
+            <div class="product-card__composition">
+              <strong>Состав:</strong> китайский бирюзовый чай (улун), цукаты ананаса, натуральные ароматические масла.
+            </div>
+          </div>
+
+          <!-- 4. Packaging Selector (Accessible Radio Group) -->
+          <fieldset class="packaging" role="radiogroup" aria-labelledby="packaging-legend">
+            <div class="packaging__header">
+              <legend class="packaging__legend" id="packaging-legend">
+                Фасовка: <span class="packaging__current-value" id="selected-weight-display">100 г</span>
+              </legend>
+              <a href="#packaging-info" class="packaging__guide-link">Как выбрать фасовку?</a>
+            </div>
+
+            <div class="packaging__options">
+              <!-- Option 1: 100g -->
+              <div class="packaging__item">
+                <input 
+                  type="radio" 
+                  name="packaging-weight" 
+                  id="packaging-100" 
+                  value="100" 
+                  class="packaging__input visually-hidden"
+                  checked
+                >
+                <label for="packaging-100" class="packaging__pill">
+                  <span class="packaging__weight">100 г</span>
+                  <span class="packaging__price-hint">326,40 ₽</span>
+                  <span class="packaging__discount-tag">-7%</span>
+                </label>
+              </div>
+
+              <!-- Option 2: 500g -->
+              <div class="packaging__item">
+                <input 
+                  type="radio" 
+                  name="packaging-weight" 
+                  id="packaging-500" 
+                  value="500" 
+                  class="packaging__input visually-hidden"
+                >
+                <label for="packaging-500" class="packaging__pill">
+                  <span class="packaging__weight">500 г</span>
+                  <span class="packaging__price-hint">1 432 ₽</span>
+                  <span class="packaging__discount-tag">-13%</span>
+                </label>
+              </div>
+
+              <!-- Option 3: 1000g -->
+              <div class="packaging__item">
+                <input 
+                  type="radio" 
+                  name="packaging-weight" 
+                  id="packaging-1000" 
+                  value="1000" 
+                  class="packaging__input visually-hidden"
+                >
+                <label for="packaging-1000" class="packaging__pill">
+                  <span class="packaging__weight">1 000 г</span>
+                  <span class="packaging__price-hint">2 064 ₽</span>
+                  <span class="packaging__discount-tag">-20%</span>
+                </label>
+              </div>
+
+              <!-- Option 4: 5000g -->
+              <div class="packaging__item">
+                <input 
+                  type="radio" 
+                  name="packaging-weight" 
+                  id="packaging-5000" 
+                  value="5000" 
+                  class="packaging__input visually-hidden"
+                >
+                <label for="packaging-5000" class="packaging__pill">
+                  <span class="packaging__weight">5 000 г</span>
+                  <span class="packaging__price-hint">6 320 ₽</span>
+                  <span class="packaging__discount-tag">-27%</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 5. Dynamic Price Block -->
+          <div class="product-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer" aria-live="polite">
+            <meta itemprop="priceCurrency" content="RUB">
+            <meta itemprop="availability" content="https://schema.org/InStock">
+
+            <div class="product-price__main">
+              <!-- Current Price -->
+              <div class="product-price__current">
+                <span id="product-price-current" itemprop="price">326,40</span>
+                <span class="currency-symbol">₽</span>
+              </div>
+
+              <!-- Old Strikethrough Price -->
+              <s class="product-price__old" aria-label="Старая цена без скидки">
+                <span id="product-price-old">349,20</span>
+                <span class="currency-symbol">₽</span>
+              </s>
+
+              <!-- Discount Tag -->
+              <span class="badge badge--discount product-price__discount" id="product-discount-badge">-7%</span>
+            </div>
+
+            <!-- Sub info: Savings and price per 100g -->
+            <div class="product-price__sub">
+              <span class="product-price__savings" id="product-savings-value">Экономия: 22,80 ₽</span>
+              <span class="product-price__unit" id="product-unit-price">326,40 ₽ / 100 г</span>
+            </div>
+          </div>
+
+          <!-- 6. Action Controls: Quantity, CTA Button, Favorite & Share -->
+          <div class="actions-row">
+            <!-- Quantity Stepper -->
+            <div class="quantity" role="group" aria-label="Выбор количества">
+              <button type="button" class="quantity__btn" id="quantity-minus" aria-label="Уменьшить количество">−</button>
+              <input 
+                type="number" 
+                class="quantity__input" 
+                id="quantity-input" 
+                value="1" 
+                min="1" 
+                max="99" 
+                aria-label="Количество упаковок"
+              >
+              <button type="button" class="quantity__btn" id="quantity-plus" aria-label="Увеличить количество">+</button>
+            </div>
+
+            <!-- Primary Add to Cart CTA -->
+            <button type="button" class="btn btn--primary" id="btn-add-to-cart">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="9" cy="21" r="1"/>
+                <circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+              <span id="btn-add-to-cart-text">В корзину</span>
+            </button>
+
+            <!-- Wishlist Heart Button -->
+            <button type="button" class="btn btn--icon" id="btn-favorite" aria-label="Добавить в избранное" aria-pressed="false" title="Добавить в избранное">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+              <span class="btn__label-mobile">В избранное</span>
+            </button>
+
+            <!-- Share Button -->
+            <button type="button" class="btn btn--icon" id="btn-share" aria-label="Поделиться товаром" title="Скопировать ссылку">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="18" cy="5" r="3"/>
+                <circle cx="6" cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+              </svg>
+              <span class="btn__label-mobile">Поделиться</span>
+            </button>
+          </div>
+
+          <!-- Secondary 1-Click Purchase Action -->
+          <button type="button" class="btn btn--secondary" onclick="alert('Оформление в 1 клик: оператор перезвонит вам в течение 10 минут.')">
+            Купить в 1 клик
+          </button>
+
+          <div class="product-card__divider"></div>
+
+          <!-- 7. Tea Specifications & Brewing Metrics -->
+          <div class="tea-specs">
+            <h2 class="section-subtitle">Параметры заваривания</h2>
+            <div class="tea-specs__grid">
+              <div class="tea-specs__card">
+                <svg class="tea-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+                </svg>
+                <span class="tea-specs__label">Температура</span>
+                <span class="tea-specs__value">80–85 °C</span>
+              </div>
+
+              <div class="tea-specs__card">
+                <svg class="tea-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span class="tea-specs__label">Время</span>
+                <span class="tea-specs__value">1–3 мин</span>
+              </div>
+
+              <div class="tea-specs__card">
+                <svg class="tea-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                  <line x1="6" y1="2" x2="6" y2="4"/>
+                  <line x1="10" y1="2" x2="10" y2="4"/>
+                  <line x1="14" y1="2" x2="14" y2="4"/>
+                </svg>
+                <span class="tea-specs__label">Пропорция</span>
+                <span class="tea-specs__value">2 ч. л. / 500 мл</span>
+              </div>
+
+              <div class="tea-specs__card">
+                <svg class="tea-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                <span class="tea-specs__label">Регион</span>
+                <span class="tea-specs__value">Китай, Фуцзянь</span>
+              </div>
+            </div>
+
+            <!-- Sensory Tags -->
+            <div class="tea-specs__tags">
+              <span class="tea-specs__tag-title">Вкусовой профиль:</span>
+              <span class="badge badge--tag">Тропический ананас</span>
+              <span class="badge badge--tag">Весенняя зелень</span>
+              <span class="badge badge--tag">Медовые ноты</span>
+              <span class="badge badge--tag">Антиоксидант</span>
+            </div>
+
+            <!-- Accordion: Extended Properties & FAQ -->
+            <div class="tea-specs__accordion">
+              <div class="tea-specs__accordion-item">
+                <button type="button" class="tea-specs__accordion-header" aria-expanded="false" aria-controls="accordion-desc">
+                  <span>Полезные свойства и эффект</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </button>
+                <div class="tea-specs__accordion-content" id="accordion-desc">
+                  <p>Ананасовый улун сочетает оздоравливающие свойства бирюзового чая и натуральных фруктов:</p>
+                  <ul>
+                    <li>Мощный природный антиоксидант, защищающий клетки от окислительного стресса;</li>
+                    <li>Способствует снижению уровня холестерина и нормализует обмен веществ;</li>
+                    <li>Мягко тонизирует без резких скачков давления благодаря плавному высвобождению теина.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tea-specs__accordion-item">
+                <button type="button" class="tea-specs__accordion-header" aria-expanded="false" aria-controls="accordion-delivery">
+                  <span>Доставка и оплата</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </button>
+                <div class="tea-specs__accordion-content" id="accordion-delivery">
+                  <p>Курьерская доставка по Москве — в день заказа или на следующий день. По России отправляем СДЭК, Почтой России и Boxberry. Оплата картой на сайте или при получении.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Trust Perks Strip -->
+          <div class="product-card__perks">
+            <div class="product-card__perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13"/>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                <circle cx="5.5" cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+              <span>Быстрая доставка по Москве и всей РФ</span>
+            </div>
+
+            <div class="product-card__perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>100% гарантия качества и подлинности</span>
+            </div>
+
+            <div class="product-card__perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <span>Фольгированная упаковка с zip-замком</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ======================================================================= -->
+  <!-- 4. LIGHTBOX MODAL (Full screen image preview)                          -->
+  <!-- ======================================================================= -->
+  <div class="gallery__lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+    <button type="button" class="gallery__lightbox-close" id="lightbox-close" aria-label="Закрыть полноэкранный режим">&times;</button>
+    <img src="assets/images/ananasovij-ulun.jpg" alt="Полноразмерное фото: Ананасовый улун" class="gallery__lightbox-img" id="lightbox-img">
+  </div>
+
+  <!-- ======================================================================= -->
+  <!-- 5. TOAST NOTIFICATION (Feedback for user actions)                      -->
+  <!-- ======================================================================= -->
+  <aside class="toast" id="action-toast" role="status" aria-live="polite">
+    <div class="toast__icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
+    <div class="toast__body">
+      <span class="toast__title" id="toast-title">Товар добавлен!</span>
+      <span class="toast__message" id="toast-message">Ананасовый улун добавлен в корзину.</span>
+    </div>
+    <button type="button" class="toast__close" id="toast-close" aria-label="Закрыть уведомление">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ======================================================================= -->
+  <!-- 6. MOBILE STICKY PURCHASE BAR                                           -->
+  <!-- High conversion mobile bottom sticky bar                                -->
+  <!-- ======================================================================= -->
+  <div class="sticky-bar" id="mobile-sticky-bar" aria-label="Быстрый заказ">
+    <div class="sticky-bar__info">
+      <span class="sticky-bar__price" id="sticky-price">326,40 ₽</span>
+      <span class="sticky-bar__meta" id="sticky-meta">Ананасовый улун (100 г)</span>
+    </div>
+    <button type="button" class="btn btn--primary sticky-bar__btn" id="sticky-cart-btn">
+      В корзину
+    </button>
+  </div>
+
+  <!-- Production JS Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>

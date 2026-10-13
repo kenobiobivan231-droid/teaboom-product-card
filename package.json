@@ -1,0 +1,24 @@
+{
+  "name": "teaboom-product-card",
+  "version": "1.0.0",
+  "description": "Тестовое задание для Teaboom.ru: верстка адаптивной карточки товара 'Ананасовый улун'",
+  "scripts": {
+    "build:css": "sass scss/main.scss css/style.css --style=expanded --no-source-map",
+    "watch:css": "sass scss/main.scss css/style.css --watch --style=expanded",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "scss",
+    "bem",
+    "vanilla-js",
+    "responsive-design",
+    "teaboom"
+  ],
+  "author": "Antigravity Pair Programmer",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}

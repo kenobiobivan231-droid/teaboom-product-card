@@ -1,0 +1,202 @@
+// =============================================================================
+// Product Gallery Component
+// Main square image viewer, interactive zoom, thumbnails & badges
+// =============================================================================
+
+@use "../utilities/mixins" as *;
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__main {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: #FAFAFA;
+    border: 1px solid var(--color-border);
+    aspect-ratio: 1 / 1;
+    cursor: zoom-in;
+    user-select: none;
+  }
+
+  &__image-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-base);
+    transform-origin: center center;
+
+    // Subtle scale on desktop hover when zoom lens active
+    .gallery__main:hover & {
+      @include respond-to("lg") {
+        transform: scale(1.4);
+      }
+    }
+  }
+
+  // Floating badges over image
+  &__badges {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  // Action buttons on top of image (Quick favorite & zoom)
+  &__floating-actions {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+  }
+
+  &__action-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all var(--transition-fast);
+
+    &:hover {
+      background-color: #ffffff;
+      color: var(--color-danger);
+      transform: scale(1.08);
+    }
+  }
+
+  // Thumbnails row
+  &__thumbs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include respond-to("md") {
+      gap: 12px;
+    }
+  }
+
+  &__thumb-btn {
+    flex: 0 0 66px;
+    height: 66px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 2px solid transparent;
+    background-color: #FAFAFA;
+    padding: 0;
+    transition: all var(--transition-fast);
+    position: relative;
+
+    @include respond-to("md") {
+      flex: 0 0 84px;
+      height: 84px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      border-color: var(--color-primary);
+      opacity: 0.9;
+    }
+
+    &.is-active {
+      border-color: var(--color-dark);
+      box-shadow: 0 0 0 2px var(--color-primary);
+    }
+  }
+
+  // Fullscreen Modal / Lightbox
+  &__lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 17, 19, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base);
+
+    &.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    &-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-modal);
+      animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    &-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: background-color var(--transition-fast);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

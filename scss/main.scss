@@ -1,0 +1,22 @@
+// =============================================================================
+// Teaboom.ru - Product Card Component Styles
+// Modern Dart Sass Manifest
+// =============================================================================
+
+@use "base/variables";
+@use "base/reset";
+@use "base/typography";
+@use "utilities/mixins";
+@use "utilities/helpers";
+
+@use "components/header";
+@use "components/breadcrumbs";
+@use "components/product-card";
+@use "components/gallery";
+@use "components/packaging";
+@use "components/price";
+@use "components/quantity";
+@use "components/buttons";
+@use "components/specs";
+@use "components/toast";
+@use "components/sticky-bar";

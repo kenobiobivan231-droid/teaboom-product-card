@@ -1,0 +1,58 @@
+// =============================================================================
+// Mobile Sticky Purchase Bar
+// Enhanced mobile conversion & UX when scrolling through description
+// =============================================================================
+
+@use "../utilities/mixins" as *;
+
+.sticky-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px 16px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transform: translateY(100%);
+  transition: transform var(--transition-base);
+
+  @include respond-to("md") {
+    display: none; // Only needed on mobile
+  }
+
+  &.is-visible {
+    transform: translateY(0);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    line-height: 1.2;
+  }
+
+  &__meta {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    @include text-truncate;
+  }
+
+  &__btn {
+    height: 44px;
+    padding: 0 20px;
+    font-size: 0.9375rem;
+    flex-shrink: 0;
+  }
+}

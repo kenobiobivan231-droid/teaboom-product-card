@@ -1,0 +1,55 @@
+// =============================================================================
+// Breadcrumbs Component
+// Navigational trail with schema microdata support
+// =============================================================================
+
+.breadcrumbs {
+  padding: 12px 0 16px;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; // Firefox
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    &:not(:last-child)::after {
+      content: "›";
+      font-size: 1rem;
+      line-height: 1;
+      color: var(--color-text-subtle);
+    }
+
+    &:last-child {
+      color: var(--color-text-main);
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+
+    &:hover {
+      color: var(--color-dark);
+      text-decoration: underline;
+    }
+  }
+}

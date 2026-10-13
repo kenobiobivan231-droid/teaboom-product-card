@@ -1,0 +1,68 @@
+// =============================================================================
+// Quantity Stepper Component
+// Accessible counter for quantity modification (- / input / +)
+// =============================================================================
+
+.quantity {
+  display: inline-flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 4px;
+  height: 50px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast);
+
+  &:hover {
+    border-color: var(--color-border-hover);
+  }
+
+  &:focus-within {
+    border-color: var(--color-dark);
+    box-shadow: 0 0 0 2px rgba(30, 32, 34, 0.15);
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-surface);
+    color: var(--color-dark);
+    font-size: 1.125rem;
+    font-weight: 700;
+    transition: all var(--transition-fast);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-primary);
+      transform: scale(1.05);
+    }
+
+    &:active:not(:disabled) {
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__input {
+    width: 44px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
