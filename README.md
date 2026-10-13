@@ -3,6 +3,8 @@
 > **Позиция:** HTML-верстальщик / Frontend-верстальщик  
 > **Проект:** Карточка товара интернет-магазина [Teaboom.ru](https://teaboom.ru)  
 > **Основа:** Товар [Ананасовый улун](https://teaboom.ru/product/ananasovij-ulun)  
+> **🌐 Live Demo (GitHub Pages):** [https://kenobiobivan231-droid.github.io/teaboom-product-card/](https://kenobiobivan231-droid.github.io/teaboom-product-card/)  
+> **📦 Репозиторий:** [https://github.com/kenobiobivan231-droid/teaboom-product-card](https://github.com/kenobiobivan231-droid/teaboom-product-card)  
 
 ---
 
